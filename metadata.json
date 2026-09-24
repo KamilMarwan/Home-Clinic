@@ -1,0 +1,6 @@
+{
+  "name": "1st Response Home Clinic",
+  "description": "Professional in-home healthcare, doctor visits, nursing, mobile diagnostics, and telemedicine with online appointment booking and patient portal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
