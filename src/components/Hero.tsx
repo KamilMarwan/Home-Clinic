@@ -144,7 +144,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onOpenPortal }) => {
                       <p className="text-xs text-slate-500">Full physical, Rx & diagnosis</p>
                     </div>
                   </div>
-                  <span className="text-xs font-bold text-slate-700 whitespace-nowrap">From $120</span>
+                  <span className="text-xs font-bold text-slate-700 whitespace-nowrap">From GH₵ 1,200</span>
                 </div>
 
                 <div
@@ -162,7 +162,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onOpenPortal }) => {
                       <p className="text-xs text-slate-500">Dressing changes, vitals & injections</p>
                     </div>
                   </div>
-                  <span className="text-xs font-bold text-slate-700 whitespace-nowrap">From $75</span>
+                  <span className="text-xs font-bold text-slate-700 whitespace-nowrap">From GH₵ 750</span>
                 </div>
 
                 <div
@@ -180,7 +180,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onOpenPortal }) => {
                       <p className="text-xs text-slate-500">Same-day sterile phlebotomy</p>
                     </div>
                   </div>
-                  <span className="text-xs font-bold text-slate-700 whitespace-nowrap">From $50</span>
+                  <span className="text-xs font-bold text-slate-700 whitespace-nowrap">From GH₵ 500</span>
                 </div>
               </div>
 

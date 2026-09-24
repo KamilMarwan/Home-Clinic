@@ -7,7 +7,7 @@ export const CLINIC_SERVICES: ClinicService[] = [
     subtitle: 'Comprehensive bedside physician evaluation and treatment',
     category: 'doctor',
     description: 'Our board-certified physicians come equipped with full clinical diagnostic tools directly to your residence. Ideal for acute medical concerns, chronic illness flare-ups, and thorough physical examinations.',
-    price: '$120 - $180',
+    price: 'GH₵ 1,200 - GH₵ 1,800',
     duration: '45 - 60 mins',
     features: [
       'Comprehensive head-to-toe clinical assessment',
@@ -25,7 +25,7 @@ export const CLINIC_SERVICES: ClinicService[] = [
     subtitle: 'Dedicated bedside clinical care by licensed registered nurses',
     category: 'nursing',
     description: 'Skilled nursing visits for patients recuperating from surgery or illness, requiring sterile dressing changes, catheter care, post-op monitoring, injectable medications, or daily health assistance.',
-    price: '$75 - $110 / visit',
+    price: 'GH₵ 750 - GH₵ 1,100 / visit',
     duration: '60 mins',
     features: [
       'Advanced sterile wound management & dressing change',
@@ -42,7 +42,7 @@ export const CLINIC_SERVICES: ClinicService[] = [
     subtitle: 'At-home sterile phlebotomy and rapid lab testing',
     category: 'diagnostics',
     description: 'No waiting rooms or travel hassle. Our certified phlebotomists collect blood, urine, or swab samples comfortably in your home with rapid turnaround certified lab results sent straight to your portal.',
-    price: '$50 + Lab panel',
+    price: 'GH₵ 500 + Lab panel',
     duration: '20 - 30 mins',
     features: [
       'Complete blood count (CBC), lipid profile & metabolic panels',
@@ -59,7 +59,7 @@ export const CLINIC_SERVICES: ClinicService[] = [
     subtitle: 'Physician-supervised intravenous vitamin and hydration therapy',
     category: 'therapy',
     description: 'Custom intravenous formulations for rapid clinical recovery, dehydration, immune reinforcement, fatigue alleviation, and post-illness rejuvenation administered by registered nurses in your home.',
-    price: '$140 - $220',
+    price: 'GH₵ 1,400 - GH₵ 2,200',
     duration: '45 - 75 mins',
     features: [
       'Myers Cocktail & Immunity Shield formulations',
@@ -94,7 +94,7 @@ export const CLINIC_SERVICES: ClinicService[] = [
     subtitle: 'Direct high-definition video consultation with our physicians',
     category: 'telehealth',
     description: 'Connect securely from your phone, tablet, or computer with our board-certified medical doctors for follow-up reviews, lab interpretations, prescription renewals, and non-emergency health concerns.',
-    price: '$65 / session',
+    price: 'GH₵ 650 / session',
     duration: '25 mins',
     features: [
       'Encrypted HIPAA-compliant video examination',
@@ -189,7 +189,7 @@ export const DEMO_APPOINTMENTS: Appointment[] = [
     notes: 'Weekly sterile dressing change for right lower leg incision. Check healing progress.',
     urgency: 'routine',
     status: 'Confirmed',
-    estimatedCost: '$85.00',
+    estimatedCost: 'GH₵ 850.00',
     createdAt: '2026-09-23T14:30:00Z'
   },
   {
@@ -209,7 +209,7 @@ export const DEMO_APPOINTMENTS: Appointment[] = [
     notes: 'Monthly chronic hypertension evaluation, adjustment of Lisinopril dosage.',
     urgency: 'routine',
     status: 'Completed',
-    estimatedCost: '$140.00',
+    estimatedCost: 'GH₵ 1,400.00',
     createdAt: '2026-09-15T09:12:00Z'
   }
 ];

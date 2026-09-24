@@ -42,8 +42,8 @@ export const FaqAndProof: React.FC = () => {
       a: 'Specimens collected in your home by our certified phlebotomists are transported immediately in cold-chain containers to accredited reference laboratories. Results are typically finalized within 12 to 24 hours and uploaded directly to your secure 1st Response Patient Portal, accompanied by physician review notes.'
     },
     {
-      q: 'Do you accept health insurance or provide medical reimbursement invoices?',
-      a: 'We provide itemized clinical super-bills and diagnostic receipts with standardized medical billing codes after every visit. Most major private and corporate health plans reimburse home healthcare and telemedicine consultations under outpatient ambulatory benefits.'
+      q: 'Do you accept health insurance and what payment methods are supported?',
+      a: 'All clinical fees are billed in Ghana Cedis (GH₵). We accept Mobile Money (MTN MoMo, Telecel Cash, AT Money), direct debit/credit cards, and cash upon visit completion. We also provide official itemized clinical super-bills and diagnostic receipts for full reimbursement by private and corporate health insurance providers.'
     },
     {
       q: 'Can 1st Response arrange prescription delivery to my house?',

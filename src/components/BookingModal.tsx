@@ -465,7 +465,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
 
               <div className="p-3 bg-emerald-50 rounded-xl border border-emerald-200/80 text-xs text-emerald-900 flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-emerald-700 shrink-0" />
-                <span>Zero dispatch travel fee promo applied. Payment can be settled via portal or upon visit completion.</span>
+                <span>Zero dispatch travel fee promo applied. Fee payable in Ghana Cedis (GH₵) via Mobile Money (MTN/Telecel) or upon visit completion.</span>
               </div>
             </div>
           )}
@@ -493,6 +493,10 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                 <div className="flex justify-between">
                   <span className="text-slate-500">Service:</span>
                   <span className="font-semibold text-slate-800">{confirmedBooking.serviceTitle}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-slate-500">Estimated Cost:</span>
+                  <span className="font-bold text-[#b91c1c]">{confirmedBooking.estimatedCost}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-slate-500">Estimated Arrival:</span>

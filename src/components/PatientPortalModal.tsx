@@ -71,6 +71,7 @@ export const PatientPortalModal: React.FC<PatientPortalModalProps> = ({
   // Interactive prescriptions
   const [prescriptionsList, setPrescriptionsList] = useState<Prescription[]>(DEMO_PRESCRIPTIONS);
   const [refillSuccessMsg, setRefillSuccessMsg] = useState<string | null>(null);
+  const [labDownloadMsg, setLabDownloadMsg] = useState<string | null>(null);
 
   // Interactive messages
   const [chatMessages, setChatMessages] = useState<{ sender: 'patient' | 'doctor'; text: string; time: string }[]>([
@@ -526,7 +527,12 @@ export const PatientPortalModal: React.FC<PatientPortalModalProps> = ({
                         </div>
                         <div className="text-left sm:text-right">
                           <div className="text-xs font-bold text-slate-800">{apt.date}</div>
-                          <div className="text-xs text-[#b91c1c]">{apt.timeSlot}</div>
+                          <div className="text-xs text-[#b91c1c] font-semibold">{apt.timeSlot}</div>
+                          {apt.estimatedCost && (
+                            <div className="text-[11px] font-bold text-slate-700 mt-0.5">
+                              Fee: {apt.estimatedCost}
+                            </div>
+                          )}
                         </div>
                       </div>
                       {apt.notes && (
@@ -657,6 +663,13 @@ export const PatientPortalModal: React.FC<PatientPortalModalProps> = ({
                     <p className="text-xs text-slate-500">Certified point-of-care specimen analysis</p>
                   </div>
 
+                  {labDownloadMsg && (
+                    <div className="p-3 bg-emerald-50 border border-emerald-200 rounded-xl text-xs text-emerald-800 flex items-center gap-2">
+                      <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0" />
+                      <span>{labDownloadMsg}</span>
+                    </div>
+                  )}
+
                   {DEMO_LABS.map(lab => (
                     <div key={lab.id} className="p-5 rounded-2xl bg-white border border-slate-200 space-y-4">
                       <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-2 pb-3 border-b border-slate-100">
@@ -671,7 +684,10 @@ export const PatientPortalModal: React.FC<PatientPortalModalProps> = ({
                           <p className="text-xs text-slate-500">Sample: {lab.sampleType} · Ordered by: {lab.orderedBy}</p>
                         </div>
                         <button
-                          onClick={() => alert(`Simulated download of certified lab report ${lab.id}`)}
+                          onClick={() => {
+                            setLabDownloadMsg(`Certified Lab Report ${lab.id} downloaded successfully.`);
+                            setTimeout(() => setLabDownloadMsg(null), 4000);
+                          }}
                           className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-300 text-xs font-semibold text-slate-700 hover:bg-slate-50 self-start sm:self-auto"
                         >
                           <Download className="w-3.5 h-3.5" />

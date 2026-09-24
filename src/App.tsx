@@ -26,10 +26,28 @@ export default function App() {
     return saved ? JSON.parse(saved) : null;
   });
 
-  // Appointments list with localStorage persistence
+  // Appointments list with localStorage persistence (migrating any previous currency to GH₵)
   const [appointments, setAppointments] = useState<Appointment[]>(() => {
     const saved = localStorage.getItem('first_response_appointments');
-    return saved ? JSON.parse(saved) : DEMO_APPOINTMENTS;
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          return parsed.map((item: Appointment) => ({
+            ...item,
+            estimatedCost: item.estimatedCost
+              ? item.estimatedCost
+                  .replace(/^\$\s*85(\.00)?/, 'GH₵ 850.00')
+                  .replace(/^\$\s*140(\.00)?/, 'GH₵ 1,400.00')
+                  .replace(/^\$/, 'GH₵ ')
+              : item.estimatedCost
+          }));
+        }
+      } catch {
+        // ignore and fallback
+      }
+    }
+    return DEMO_APPOINTMENTS;
   });
 
   // Notification toast
